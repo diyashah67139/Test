@@ -40,7 +40,7 @@ except Exception as e:
 def get_db_connection():
     try:
         conn = pyodbc.connect(
-            f"DRIVER={{ODBC Driver 17 for SQL Server}};"
+            f"DRIVER={{/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.0.so.1.1}};"
             f"SERVER={DB_SERVER},1433;"
             f"DATABASE={DB_NAME};"
             f"UID={DB_USER};"
