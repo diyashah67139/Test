@@ -1,5 +1,5 @@
 DRIVER = "ODBC Driver 18 for SQL Server"
-SERVER = "192.168.121.84"
+SERVER = "192.168.121.84,1433"
 DATABASE = "banks"
 UID = "sa"
 PWD = "Fin@123#"
