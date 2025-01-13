@@ -10,7 +10,8 @@ RUN apt-get update && \
     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list && \
     apt-get update && \
-    ACCEPT_EULA=Y apt-get install -y msodbcsql17
+    ACCEPT_EULA=Y apt-get install -y msodbcsql17 && \
+    ln -sfn /opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.0.so.1.1 /usr/lib/libmsodbcsql-17.0.so.1.1
 
 # Create and set the working directory
 WORKDIR /app
